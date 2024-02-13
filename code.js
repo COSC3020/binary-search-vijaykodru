@@ -6,13 +6,13 @@ function binarySearch(list, element) {
         let middle = parseInt((left + right)/2)
 
         if(arr[middle] === element){
-            return middle
+            return middle;
         }
         else if(arr[middle] < element){
-            left = middle + 1
+            left = middle + 1;
         }
         else{
-            right = middle - 1
+            right = middle - 1;
         }
     }
     
