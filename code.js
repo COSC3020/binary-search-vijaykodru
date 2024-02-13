@@ -10,6 +10,9 @@ function binarySearch(list, element) {
         let middle = Math.floor((left + right)/2)
 
         if(list[middle] === element){
+            while (middle > 0 && list[middle - 1] === element) {
+                middle--;
+            }
             return middle;
         }
         else if(list[middle] < element){
@@ -26,3 +29,4 @@ function binarySearch(list, element) {
 
 //Reference: The following website helped me understand how the binary search worked through a interactive excercise of implementing the search
 // https://www.khanacademy.org/computing/computer-science/algorithms/binary-search/a/binary-search
+// https://www.geeksforgeeks.org/binary-search-in-javascript/
